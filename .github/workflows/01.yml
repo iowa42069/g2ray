@@ -7,4 +7,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Workflow triggered manually"
+      - run: |
+        echo "Workflow triggered manually"
+        echo "hello world"
