@@ -9,4 +9,11 @@ jobs:
     steps:
       - name: Test
         run: |
-          echo "::notice::Yoinks!"
+          echo "::notice::🛠️ Installing stuff.!"
+          
+          apt-get update && apt-get install -y --no-install-recommends \
+          bash git curl wget unzip tzdata openssl ca-certificates \
+          && rm -rf /var/lib/apt/lists/*
+
+          echo "::notice::✅ Stuff installed succesfully."
+          
